@@ -1,16 +1,16 @@
 import express from 'express';
-import cors from 'cors';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import bodyParser from 'body-parser';
 
 import routes from './routes/index.mjs';  // Importing routes with ES6 syntax
 import errorMiddleware from './middlewares/error.middleware.mjs';  // Importing custom middleware
+import accessControl from './middlewares/accessControl.middleware.js';  // Importing custom middleware
 
 const app = express();
 
 // Middleware setup
-app.use(cors()); // Enable Cross-Origin Resource Sharing
+app.use(accessControl); // Enable Cross-Origin Resource Sharing
 app.use(helmet()); // Secure HTTP headers
 app.use(morgan('combined')); // Log HTTP requests
 app.use(bodyParser.json()); // Parse JSON requests

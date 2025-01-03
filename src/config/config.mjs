@@ -1,6 +1,4 @@
-import dotenv from "dotenv";
 import ENV from "./env.mjs";
-dotenv.config();
 
 const config = {
     app: {

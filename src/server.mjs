@@ -1,10 +1,9 @@
 import dotenv from 'dotenv';
 import http from 'http';
 import app from './app.mjs';  // Import the app defined in app.mjs
+import config from './config/config.mjs';
 
-dotenv.config(); // Load environment variables
-
-const PORT = process.env.PORT || 3000;
+const PORT = config.app.port || 3000;
 const server = http.createServer(app);
 
 // Start the server
