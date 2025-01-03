@@ -5,7 +5,7 @@ import bodyParser from 'body-parser';
 
 import routes from './routes/index.mjs';  // Importing routes with ES6 syntax
 import errorMiddleware from './middlewares/error.middleware.mjs';  // Importing custom middleware
-import accessControl from './middlewares/accessControl.middleware.js';  // Importing custom middleware
+import accessControl from './middlewares/accessControl.middleware.mjs';  // Importing custom middleware
 
 const app = express();
 
