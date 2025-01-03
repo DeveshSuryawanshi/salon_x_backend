@@ -2,6 +2,9 @@
 
 ```
 project-root/
+├── logs/                # Log files
+│   └── application.log  # Main application log file
+│
 ├── public/               # Static files accessible to the client
 │   ├── css/              # CSS files
 │   │   └── styles.css

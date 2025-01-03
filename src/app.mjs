@@ -6,11 +6,13 @@ import bodyParser from 'body-parser';
 import routes from './routes/index.mjs';  // Importing routes with ES6 syntax
 import errorMiddleware from './middlewares/error.middleware.mjs';  // Importing custom middleware
 import accessControl from './middlewares/accessControl.middleware.mjs';  // Importing custom middleware
+import { requestLoggerMiddleware } from './config/logger.mjs';
 
 const app = express();
 
 // Middleware setup
 app.use(accessControl); // Enable Cross-Origin Resource Sharing
+app.use(requestLoggerMiddleware); // Log HTTP requests
 app.use(helmet()); // Secure HTTP headers
 app.use(morgan('combined')); // Log HTTP requests
 app.use(bodyParser.json()); // Parse JSON requests
