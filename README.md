@@ -1,3 +1,5 @@
+# Salon_X_Backend
+
 ```
 project-root/
 ├── public/               # Static files accessible to the client
