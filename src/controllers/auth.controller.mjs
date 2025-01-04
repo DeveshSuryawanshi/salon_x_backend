@@ -10,7 +10,7 @@ class AuthController {
     
     async login(req, res, next) {
         try{
-            const response = await AuthService.login(req.body);
+            const response = await this.AuthService.login(req.body);
             return res.status(response.status).json(response);
         }catch(err){
             next(err);
@@ -19,7 +19,7 @@ class AuthController {
     
     async register(req, res, next) {
         try {
-            const response = await AuthService.register(req.body);
+            const response = await this.AuthService.register(req.body);
             return res.status(response.status).json(response);
         } catch (error) {
             next(error)

@@ -8,7 +8,7 @@ class AuthService {
     }
 
     async register(email, password) {
-
+        
     }
 }
 
