@@ -19,7 +19,6 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: [true, 'Password is required'],
-      minlength: [6, 'Password must be at least 6 characters long'],
     },
     role: {
       type: String,
@@ -29,9 +28,11 @@ const userSchema = new mongoose.Schema(
     // Any other fields you may need for advanced features
     profilePic: {
       type: String, // URL for the user's profile picture (optional)
+      default: '',
     },
     address: {
       type: String, // User address (optional)
+      default: '',
     },
     createdAt: {
       type: Date,
